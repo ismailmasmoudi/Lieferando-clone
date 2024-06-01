@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferando-clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./logo-icon.png" type="/logo-icon.png">
+    <script src="script.js"></script>
+    <script src="templates.js"></script>
+
+</head>
+
+<header>
+    <div class="header-main-container">
+
+        <a href="index.html" class="home-logo">
+            <div class="header-left">
+                <img class="header-logo" src="./logo-icon.png" alt="">
+                <p class="header-title">Lieferando-clone</p>
+
+            </div>
+        </a>
+        <div class="header-center">
+            <p>Speisekarte</p>
+        </div>
+        <div class="header-right">
+            <img class="header-icon-right" src="setting-icon.png" alt="setting">
+        </div>
+
+    </div>
+
+</header>
+
+
+<body onload="render()">
+    <div class="content">
+        <div class="left-side">
+            <div class="restaurant-maincontainer">
+                <img class="cover-resataurant" src="restaurant-cover.jpg" alt="">
+                <div class="restaurant-description">
+                    <p class="restaurant-name"> Restaurant Italia </p>
+                    <div class="feedback">
+                        <img class="icon-small" src="star.png" alt="">
+                        <a href="">4.4 (200+)</a>
+                    </div>
+
+                    <div class="commend-price">
+                        <div class="min-commend">
+                            <img class="icon-extra-small" src="shoppingbag.png" alt="">
+                            <p>Min. 3,00 €</p>
+                        </div>
+                        <div class="delivery-cost">
+                            <img class="icon-extra-small" src="delivery-icon-grey.png" alt="">
+                            <p>4,99 €</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="menus-frame">
+                <div class="menus">
+                    <div class="menu-button" id="menu-button">
+                        <a href="#Pizza-Menus">
+                            <p class="inline">Pizza Menus</p>
+                        </a>
+                    </div>
+                    <div class="menu-button" id="menu-button">
+                        <a href="#Burger-Menus">
+                            <p class="inline">Burger Menus</p>
+                        </a>
+                    </div>
+                    <div class="menu-button" id="menu-button">
+                        <a href="#Pasta-Menu">
+                            <p class="inline">Pasta Menus</p>
+                        </a>
+                    </div>
+                    <div class="menu-button" id="menu-button">
+                        <a href="#Dessert-Menu">
+                            <p class="inline">Dessert Menus</p>
+                        </a>
+                    </div>
+                    <div class="menu-button" id="menu-button">
+                        <a href="#Drinks-Menus">
+                            <p class="inline">Drinks Menus</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-main-container">
+                <img class="category-image" src="./pizza-band.jpg" alt="pizza band">
+                <div class="category-title" id="Pizza-Menus">
+                    <p>Pizza Menus</p>
+                </div>
+
+                <div id="menu-list-pizza"></div>
+                <img class="category-image" src="./buerger-band.jpg" alt="burger band">
+
+                <div class="category-title" id="Burger-Menus">
+                    <p>Burger Menus</p>
+                </div>
+
+                <div id="menu-list-burger"></div>
+
+                <img class="category-image" src="./pasta-band.png" alt="pasta band">
+                <div class="category-title" id="Pasta-Menu">
+                    <p>Pasta Menus</p>
+                </div>
+                <div id="menu-list-pasta"></div>
+
+
+                <img class="category-image" src="./dessert-band.jpg" alt="dessert band">
+                <div class="category-title" id="Dessert-Menu">
+                    <p>Dessert Menus</p>
+                </div>
+                <div id="menu-list-dessert"></div>
+
+                <img class="category-image" src="./drinks-band.jpg" alt="drinks band">
+                <div class="category-title" id="Drinks-Menus">
+                    <p>Drinks Menus</p>
+                </div>
+                <div id="menu-list-drinks"></div>
+
+            </div>
+        </div>
+        <div class="basket-right-side" id="basket-right-side">
+            <div class="basket" id="basket">
+                <div>
+                    <p class="Baskte-title">Warenkorb</p>
+                </div>
+
+                <div class="delivery-or-pickup">
+                    <a class="delivery">
+                        <div class="delivery-icon"> <img class="delivery-icon" src="./delivery-icon.png" alt=""></div>
+                        <div class="delivery-description">
+                            <div class="delivery-title">Lieferung</div>
+                            <div class="delivery-time">20-45min</div>
+                        </div>
+                    </a>
+                    <a class="pickup">
+                        <div class="delivery-icon"> <img class="delivery-icon" src="./pickup-icon-grey.png" alt="">
+                        </div>
+                        <div class="pickup-description">
+                            <div class="pickup-title">Abholung</div>
+                            <div class="delivery-time">Nicht verfügbar</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="basket-list" class="basket-list"></div>
+
+                <div id="total-price-table" class="total-price-Frame">
+                    <div class="basket-empty-container">
+                        <div><img class="baket-image" src="./shoppingbag.png" alt=""></div>
+                        <div class="basket-empty-p-title">
+                            <p>Fülle deinen Warenkorb</p>
+                        </div>
+                        <div class="basket-empty-p">Füge einige leckere Gerichte aus der <br> Speisekarte hinzu und
+                            bestelle
+                            dein Essen.</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div onclick="displayBasket ()" class="add-to-basket-responsive" id="add-to-basket-responsive">
+        <div class="add-to-cart">
+            <img class="basket-icon" src="add-to-basket.png">
+            <p id="add-total-to-basket-button">Basket</p>
+        </div>
+    </div>
+    <div onclick="CloseBasket()">
+        <img src="close.png" alt="" class="close" id="close">
+    </div>
+
+</body>
+<footer>
+    <div class="links-footer">
+        <a>Recommend a restaurant</a>
+        <a>Sign up a restaurant</a>
+        <a>Jobs</a>
+        <a>Terms of Service</a>
+        <a>Privacy statement</a>
+        <a>Colophon</a>
+        <a>Cookie Statement</a>
+        <a>Bug Bounty</a>
+        <a>Ethics hotline</a>
+    </div>
+
+    <p>© 2024 LieferandoClone</p>
+
+</footer>
+
+</html>
