@@ -340,3 +340,15 @@ function closeBasket() {
     render();
 }
 
+function  returnHtmlEmptyTable() {
+    return `
+    <div class="basket-empty-container">
+    <div><img class="baket-image" src="./shoppingbag.png" alt=""></div>
+    <div class="basket-empty-p-title">
+        <p>Fülle deinen Warenkorb</p>
+    </div>
+    <div class="basket-empty-p">Füge einige leckere Gerichte aus der <br> Speisekarte hinzu und bestelle
+        dein Essen.</div>
+</div>
+    `;
+}
